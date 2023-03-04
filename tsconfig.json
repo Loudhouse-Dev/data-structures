@@ -6,6 +6,6 @@
         "lib": ["ES6"],
         "strict": true
     },
-    "include": ["main/**/*.ts"],
+    "include": ["**/*.ts"],
     "exclude": ["node_modules"]
 }

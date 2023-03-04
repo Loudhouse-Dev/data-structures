@@ -5,7 +5,7 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "test": "test"
+        "test": "jest"
     },
     "repository": {
         "type": "git",
@@ -30,6 +30,7 @@
         "@types/jest": "^29.4.0",
         "eslint": "^8.35.0",
         "prettier": "^2.8.4",
-        "ts-jest": "^29.0.5"
+        "ts-jest": "^29.0.5",
+        "ts-node": "^10.9.1"
     }
 }
