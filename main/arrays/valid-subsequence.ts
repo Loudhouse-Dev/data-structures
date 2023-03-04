@@ -26,3 +26,6 @@ export function validSubsequence(array: number[], sequence: number[]) {
     // Return true if the sequence index is equal to the length of the sequence
     return sequenceIndex === sequence.length;
 }
+
+// Test args: [6,8,2,1,15,24,56], [2,15,56] --> true
+// Test args: [12,4,1,3,5,81,44], [4,12,3,44] --> false
