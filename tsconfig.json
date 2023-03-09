@@ -6,6 +6,10 @@
         "lib": ["ES6"],
         "strict": true
     },
-    "include": ["**/*.ts"],
+    "include": [
+        "**/*.ts",
+        "main/__tests__/binary-trees/bst-reverse.test.ts",
+        "main/binary-trees/bst-reverse.ts"
+    ],
     "exclude": ["node_modules"]
 }
