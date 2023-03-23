@@ -15,16 +15,23 @@
 
 def uncompress(str):
   numbers = '0123456789'
-  result = []
+  result = ''
   pointA = 0
   pointB = 0
+  #loop while second pointer is a valid index
   while pointB < len(str):
+    #check if pointerB is in the numbers string
+    #when pointerB is no longer a number, it must be a letter so we can move along
     if str[pointB] in numbers:
+      #if it is, incrememnt it
       pointB += 1
     else:      
+      #slice the string at pointerA and convert to number
       num = int(str[pointA:pointB])
+      #append to out array 'num' times
       result.append(str[pointB] * num)
+      #update pointers before looping again
       pointB += 1
       pointA = pointB
       
-  return ''.join(result)
+  return result
