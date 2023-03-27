@@ -11,7 +11,8 @@ Each BinaryTree node has an integer value, a left child node, and a right child 
            /  \ 
           8   9
 
-  This could be solved with a BFS using a queue, but the recursive solution is better with time and space
+  This could be solved with a BFS using a queue, but the recursive solution has a better space compplexity of O(d) where d is the depth of the tree. 
+  The recursive solution has a time complexity of O(n) where n is the number of nodes in the tree.
 */
 
 export class BinaryTree {
@@ -27,9 +28,11 @@ export class BinaryTree {
 }
 
 export function invertBinaryTree(tree: BinaryTree | null) {
-    //if root node is null return
+    //Base Case: if root node is null return
     if (tree === null) return;
+    //Swap left and right nodes
     swapLeftAndRightNodes(tree);
+    //Recursively call invertBinaryTree on left and right subtrees
     invertBinaryTree(tree.left);
     invertBinaryTree(tree.right);
 }
@@ -38,7 +41,7 @@ export function invertBinaryTree(tree: BinaryTree | null) {
 function swapLeftAndRightNodes(tree: BinaryTree) {
     //define variable to temporarily hold value before swapping
     const left = tree.left;
-    //swap nodes
+    //swap left and right nodes
     tree.left = tree.right;
     tree.right = left;
 }
