@@ -23,6 +23,7 @@ const list = {
 */
 
 export const hasPathBFS = (graph: Graph, src: string, dst: string) => {
+    //instantiate queue to help traverse
     const queue = [src];
 
     while (queue.length > 0) {
