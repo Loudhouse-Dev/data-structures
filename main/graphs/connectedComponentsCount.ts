@@ -54,3 +54,6 @@ console.log(
         4: ['3', '2'],
     })
 ); // expected: ----> 2
+
+console.log('hello' || 'world');
+console.log('foo' && 'bar');
