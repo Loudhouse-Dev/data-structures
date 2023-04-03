@@ -17,6 +17,7 @@ export const getPermutations = (array: number[]) => {
 
 //define helper func to recurse and find valid permutations
 const permsHelper = (i: number, array: number[], perms: number[][]) => {
+    //base case
     if (i === array.length - 1) {
         perms.push(array.slice());
     } else {
@@ -28,6 +29,7 @@ const permsHelper = (i: number, array: number[], perms: number[][]) => {
     }
 };
 
+//define helper func to swap elements in array
 const swap = (i: number, j: number, array: number[]) => {
     const temp = array[i];
     array[i] = array[j];

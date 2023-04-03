@@ -32,7 +32,7 @@ const depthFirstPrintRecursive = (graph: Graph, source: string) => {
     }
 };
 
-//
+//depthFirstPrintIterative(graph, 'a'); //a, c, e, b, d, f
 depthFirstPrintRecursive(graph, 'a'); //a, b, d, f, c, e
 //Once we hit f, we're done, we can no longer traverse the graph
 depthFirstPrintRecursive(graph, 'b'); //b, d, f

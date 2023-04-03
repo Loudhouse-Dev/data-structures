@@ -19,6 +19,7 @@ export class Node {
 export function depthFirstValues(root: Node | null): number[] {
     if (root === null) return [];
 
+    //we use the spread operator to flatten the arrays
     const leftValues = depthFirstValues(root.left);
     const rightValues = depthFirstValues(root.right);
 

@@ -6,8 +6,9 @@ Assume that the array is non-empty.
 const maxValue = (nums: number[]) => {
     let max = -99999;
     let i = 0;
-
+    //loop over array
     while (i <= nums.length) {
+        //if current element is greater than max, set max to current element
         if (nums[i] > max) {
             max = nums[i];
         }

@@ -18,6 +18,7 @@ export class Node {
 }
 
 export const treeSumBFS = (root: Node | null) => {
+    //if root is null, return 0
     if (root === null) return 0;
 
     //define a queue to hold our values
@@ -32,6 +33,7 @@ export const treeSumBFS = (root: Node | null) => {
         const node: Node | undefined = queue.shift();
         if (node !== undefined) {
             sum += node.val;
+            //add the left and right nodes to the queue
             if (node.left !== null) queue.push(node.left);
             if (node.right !== null) queue.push(node.right);
         }
