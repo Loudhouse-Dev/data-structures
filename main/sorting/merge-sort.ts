@@ -39,6 +39,7 @@ function merge(
     endIndex: number,
     helperArray: number[]
 ) {
+    //define three pointers
     let k = startIndex;
     let i = startIndex;
     let j = midIndex + 1;

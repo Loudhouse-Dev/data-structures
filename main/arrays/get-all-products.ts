@@ -16,7 +16,7 @@ input array? How would you handle this?
 
 export const getAllProducts = (array: number[]): number[] => {
     let result: number[] = [];
-
+    //
     function process(array: number[], i: number): number | undefined {
         // console.log(array);
         const newArray = [...array];

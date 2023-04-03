@@ -27,7 +27,7 @@ export const hasPath = (graph: Graph, src: string, dst: string) => {
     //if src and dst are equal we have found a path
     if (src === dst) return true;
 
-    //
+    //iterate over neighbors of src
     for (let neighbor of graph[src]) {
         if (hasPath(graph, neighbor, dst) === true) {
             return true;

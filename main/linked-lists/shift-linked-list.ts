@@ -19,7 +19,9 @@ export class LinkedList {
 
 export function shiftLinkedList(head: LinkedList, k: number) {
     let length = 1;
+    //find the tail of the linked list
     let tail: LinkedList = head;
+    //
     while (tail.next !== null) {
         tail = tail.next;
         length++;
