@@ -26,9 +26,13 @@ export const hasPathBFS = (graph: Graph, src: string, dst: string) => {
     //instantiate queue to help traverse
     const queue = [src];
 
+    //while queue is not empty
     while (queue.length > 0) {
+        //remove first element from queue
         const current = queue.shift()!;
+        //if the current node is target node, return true
         if (current === dst) return true;
+        //iterate over neighbors of the current node
         for (let neighbor of graph[current]) {
             queue.push(neighbor);
         }
