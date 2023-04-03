@@ -54,4 +54,29 @@ c.right = f;
 //  / \      \
 // 4   -2     1
 
-console.log(maxPathSum(a)); //---->16
+console.log(maxPathSum(a)); //----> expect 16
+
+const a2 = new Node(5);
+const b2 = new Node(11);
+const c2 = new Node(54);
+const d2 = new Node(20);
+const e2 = new Node(15);
+const f2 = new Node(1);
+const g2 = new Node(3);
+
+a2.left = b2;
+a2.right = c2;
+b2.left = d2;
+b2.right = e2;
+e2.left = f2;
+e2.right = g2;
+
+//        5
+//     /    \
+//    11    54
+//  /   \
+// 20   15
+//      / \
+//     1  3
+
+console.log(maxPathSum(a2)); //---> expect 59
