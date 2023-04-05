@@ -1,4 +1,4 @@
-import { maxSubsetSumNoAdjacent } from '../../dynamic-programming/maxSubsetSumNoAdjacent';
+import { maxSubsetSumNoAdjacent } from '../../dynamic-programming/max-subset-sum-no-adjacent';
 
 describe('maxSubsetSumNoAdjacent', () => {
     it('should return 0 if the array is empty', () => {
