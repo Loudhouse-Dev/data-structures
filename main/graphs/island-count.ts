@@ -15,6 +15,17 @@ example:
 
 */
 
+/* High level strategy:
+* Need to check for graph cycles by keeping track of visited nodes
+* Need a count variable to increment as we find land and eventually return
+* Need a helper function to recursively traverse the grid
+
+- start iteratively traversing our grid from position [0,0]
+- call helper function to check if we are inbounds and if we have hit land
+- if we have hit land, we have found an island, we increment our island count
+- helper function needs to recursively traverse in all directions to search for neighbors
+*/
+
 export function islandCount(grid: string[][]) {
     const visited = new Set();
     let islandCount = 0;
@@ -45,6 +56,9 @@ function exploreIsland(
     //we only want to traverse through land, no water
     if (grid[row][col] === 'W') return;
 
+    //we have to convert array values to a string so we can add them to a set
+    //if we add an array to a set, it will be treated as an object
+    //and we could get a false positive
     const pos = row + ',' + col;
     //if we've seen this node before, we don't want to traverse it again
     if (visited.has(pos)) return false;
