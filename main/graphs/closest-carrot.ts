@@ -26,7 +26,7 @@ export const closestCarrot = (
     colStart: number
 ) => {
     //keep track of visited nodes
-    const visited = new Set();
+    const visited = new Set([rowStart + ',' + colStart]);
     //we're using breadth-first search, so we need a queue
     const queue = [[rowStart, colStart, 0]];
 
@@ -50,16 +50,21 @@ export const closestCarrot = (
             queue.push([neighbor[0], neighbor[1], distance + 1]);
         }
     }
+    //if we've traversed the entire grid and there is no carrot, return -1
     return -1;
 };
 //helper function to get the neighbors of a node
 const getNeighbors = (grid: string[][], row: number, col: number) => {
     const neighbors = [];
     //check if the neighbor is in bounds and not a wall
+    //if neighbor above is in bounds and not a wall, add it to the neighbors array
     if (row > 0 && grid[row - 1][col] !== 'X') neighbors.push([row - 1, col]);
+    //if neighbor below is in bounds and not a wall, add it to the neighbors array
     if (row < grid.length - 1 && grid[row + 1][col] !== 'X')
         neighbors.push([row + 1, col]);
+    //if neighbor to the left is in bounds and not a wall, add it to the neighbors array
     if (col > 0 && grid[row][col - 1] !== 'X') neighbors.push([row, col - 1]);
+    //if neighbor to the right is in bounds and not a wall, add it to the neighbors array
     if (col < grid[0].length - 1 && grid[row][col + 1] !== 'X')
         neighbors.push([row, col + 1]);
     return neighbors;
