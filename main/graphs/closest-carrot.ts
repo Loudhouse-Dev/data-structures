@@ -45,6 +45,7 @@ export const closestCarrot = (
             [0, -1],
         ];
         for (let direction of directions) {
+            //destructure the direction
             const [rowDir, colDir] = direction;
             const rowNext = row + rowDir;
             const colNext = col + colDir;

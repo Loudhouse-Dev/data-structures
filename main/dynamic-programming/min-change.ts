@@ -26,7 +26,9 @@ export const minChangeHelper = (
 
     //Recursive Case
     let minCoins: number = Infinity;
+    //for each coin, we want to find the minimum number of coins needed to make the target amount
     for (let coin of coins) {
+        //we want to find the minimum number of coins needed to make the target amount
         const numCoins: number =
             1 + minChangeHelper(amount - coin, coins, cache);
         minCoins = Math.min(minCoins, numCoins);

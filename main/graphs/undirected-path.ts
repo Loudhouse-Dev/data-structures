@@ -34,8 +34,9 @@ const pathExists = (
 
     //mark node as visited
     visited.add(src);
-
+    //traverse through neighbors
     for (let neighbor of graph[src]) {
+        //check if neighbor is nodeB or not
         if (pathExists(graph, neighbor, dst, visited) === true) {
             return true;
         }
