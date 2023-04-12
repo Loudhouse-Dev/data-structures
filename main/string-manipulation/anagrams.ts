@@ -15,14 +15,31 @@ export const anagrams = (str1: string, str2: string): boolean => {
     return false;
 };
 
-// //with hash table
-// export const anagrams2 = (str1: string, str2: string): boolean => {
-//   //create a hash table
-//   const count = {};
+//with hash table
+export const anagrams2 = (str1: string, str2: string): boolean => {
+    //create a hash table
+    const count: { [key: string]: number } = {};
 
-//   for(let char of str1) {
-//     if(!(char in count)) {
-//       count[char] = 0;
-//     count[char] = (count[char] || 0) + 1;
-//   }
-// };
+    for (let char of str1) {
+        if (!(char in count)) {
+            count[char] = 0;
+        }
+        count[char] = count[char] += 1;
+    }
+
+    for (let char of str2) {
+        if (!(char in count === undefined)) {
+            return false;
+        } else {
+            count[char] -= 1;
+        }
+    }
+
+    for (let char in count) {
+        if (count[char] !== 0) {
+            return false;
+        }
+    }
+
+    return true;
+};
