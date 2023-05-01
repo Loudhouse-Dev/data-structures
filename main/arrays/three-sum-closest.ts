@@ -16,7 +16,7 @@ export const threeSumClosest = (nums: number[], target: number): number => {
     //iterate through the array
     for (let i = 0; i < nums.length - 2; i++) {
         //set up 2 pointers
-        //we have a total of three pointers now...i, left(i + 1), and right(nums.length - 1
+        //we have a total of three pointers now...i, left(i + 1), and right(nums.length - 1)
         let left = i + 1;
         let right = nums.length - 1;
 
