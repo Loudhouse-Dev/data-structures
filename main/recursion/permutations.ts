@@ -19,5 +19,6 @@ export const permutations = (array: unknown[]): unknown[][] => {
             ]);
         }
     }
+    // console.log(allPermutations);
     return allPermutations;
 };
