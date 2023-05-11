@@ -7,6 +7,7 @@ type Collision = {
 const findMostCollisions = (collisions: Collision[]) => {
     const intersectionCounts = new Map<string, number>();
 
+    //
     for (const collision of collisions) {
         if (collision.numVehiclesInvolved !== 0) {
             const streetArr = [collision.street1, collision.street2].sort();

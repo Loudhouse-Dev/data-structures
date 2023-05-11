@@ -27,6 +27,7 @@ const romanToInt = (s: string): number => {
     let i = 0;
 
     while (i < s.length) {
+        // console.log(i);
         const currentSymbol = s[i];
         const nextSymbol = s[i + 1];
 
