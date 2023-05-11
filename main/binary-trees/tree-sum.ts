@@ -20,6 +20,7 @@ export const treeSum = (root: Node | null): number => {
     //base case
     if (root === null) return 0;
 
+    //recurse on left and right
     return root.val + treeSum(root.left) + treeSum(root.right);
 };
 
