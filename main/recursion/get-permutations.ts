@@ -19,10 +19,13 @@ export const getPermutations = (array: number[]) => {
 const permsHelper = (i: number, array: number[], perms: number[][]) => {
     //base case
     if (i === array.length - 1) {
+        //push copy of array into perms array
         perms.push(array.slice());
     } else {
         for (let j = i; j < array.length; j++) {
+            //swap elements in array
             swap(i, j, array);
+            //recurse on next element
             permsHelper(i + 1, array, perms);
             swap(i, j, array);
         }
